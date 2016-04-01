@@ -3,6 +3,9 @@
 #include "ros/ros.h"
 #include <geometry_msgs/PoseStamped.h>
 
+#include <opencv2/highgui/highgui.hpp>
+#include <opencv2/imgproc/imgproc.hpp>
+
 float uav_x;
 float uav_y;
 float uav_z;
@@ -31,6 +34,7 @@ int main(int argc, char **argv)
 		ros::spinOnce();
 		fprintf(position_data_file,"%f	%f	%f\n",uav_x,uav_y,uav_z);
 		ROS_INFO("%f    %f    %f\n",uav_x,uav_y,uav_z);
+		cv::waitKey(100);
     }
     
 	fclose(position_data_file);
