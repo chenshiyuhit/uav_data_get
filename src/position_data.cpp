@@ -84,7 +84,7 @@ int main(int argc, char **argv)
     ros::Subscriber localpose_sub_;
 
     // localpose_sub_= l_nh_.subscribe("/hummingbird/ground_truth/odometry",1000,localposeCallBack);
-    localpose_sub_= l_nh_.subscribe("/hummingbird/odometry_sensor1/odometry",1000,localposeCallBack);
+    localpose_sub_= l_nh_.subscribe("/rlg_af1/odometry_sensor1/odometry",1000,localposeCallBack);
 
     ros::spin();
     
